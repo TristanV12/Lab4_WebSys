@@ -1,0 +1,39 @@
+[
+
+{"name":"Thunderstruck",
+"artist":"AC/DC",
+"album":"The Razor's Edge",
+"date":1990,
+"genre":"Hard Rock",
+"link":"http://www.acdc.com/us",
+"rep":"acdc.com",
+"image":"razorsedge.jpg"},
+
+{"name":"21 Guns",
+"artist":"Green Day",
+"album":"21st Century Breakdown",
+"date":2009,
+"genre":"Alternative Rock",
+"link":"http://www.greenday.com/",
+"rep":"greenday.com",
+"image":"21.jpg"},
+
+{"name":"Sugar, We're Going Down",
+"artist":"Fall Out Boy",
+"album":"From Under the Cork Tree",
+"date":2005,
+"genre":"Pop Punk",
+"link":"http://www.falloutboy.com",
+"rep":"falloutboy.com",
+"image":"cork.jpg"},
+
+{"name":"99 Luftballons",
+"artist":"Nena",
+"album":"Nena",
+"date":1982,
+"genre":"Neue Deutsche Welle",
+"link":"#",
+"rep":"None",
+"image":"nena.jpg"}
+
+]

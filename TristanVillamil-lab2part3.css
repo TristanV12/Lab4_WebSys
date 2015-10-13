@@ -1,0 +1,65 @@
+/* header */
+h1 {
+	font-variant: small-caps;
+	text-decoration: underline;
+}
+
+/* format items within the song */
+ol li {
+	display: inline-block;
+	width: 10%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.5em;
+}
+
+/* formats the songs */
+ul li.song, li.top, #end {
+	list-style-type: none;
+    border-top-style: dashed;
+    border-width: 5px;
+    text-align: center;
+}
+
+/* link */
+a {
+	font-weight: bold;
+}
+
+/* format the title of songs */
+.name {
+	font-variant: small-caps;
+}
+
+/* favorite list item */
+#favorite li.name {
+	color: green;
+}
+
+/* artist name */
+.artist {
+	font-weight: bold;
+}
+
+/* album name */
+.album {
+	font-style: italic;
+}
+
+/* date formatting */
+.date {
+	font-size: 1em;
+}
+
+/* genre formatting */
+.genre {
+	font-size: 1em;
+	list-style-type: disc;
+}
+
+/* the end portion */
+#end {
+	font-size: .5em;
+	font-style: italic;
+}

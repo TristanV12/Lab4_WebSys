@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lab 4 AJAX</title>
+    <link rel="stylesheet" type="text/css" href="TristanVillamil-lab2part3.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      //sets up jq
+      var jq = jQuery.noConflict();
+
+      //runs javascript function when the document loads
+      jq(document).ready(function(){
+
+        //when the button is clicked, this function runs
+        jq("#site").click(function(){
+
+          //hides picture
+          jq("#site").hide();
+
+          //string to add to html later
+          var str = "";
+
+          //gets required JSON
+          jq.getJSON( "lab4.json", function( data ) {
+
+            //goes through each element in the JSON function
+            jq.each( data, function( song ) {
+              str += "<li class=\"song\"><ol>";
+              jq.each( data[song], function( tag, info ){
+
+                //does different things for some different tags
+                if(tag == "link"){ str += "<li class=\"" + tag + "\"><a href=\"" + info + "\">"; }
+                else if(tag == "rep") { str += info + "</a></li>" }
+                else if(tag == "image") { str += "<li class=\"cover\"><img src=\"" + info + "\" alt=\"Cover\" height=\"100%\" width=\"100%\"></li>" }
+                else if(tag == "genre") { str += "<li class=\"" + tag + "\">" + " &bull; " + info + "</li>" }
+                else { str += "<li class=\"" + tag + "\">" + info + "</li>" }
+              });
+              str += "</ol></li>";
+            });
+            //set html to the string
+            jq("#place").html(str);
+          });
+
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="songs">
+      <!-- Header -->
+      <li class="top">
+          <ol>
+              <li><h1>Title</h1></li>
+              <li><h1>Artist</h1></li>
+              <li><h1>Album</h1></li>
+              <li><h1>Date</h1></li>
+              <li><h1>Genre</h1></li>
+              <li><h1>Link</h1></li>
+              <li><h1>Cover</h1></li>
+          </ol>
+      </li>
+
+      <a id="site" href="#"><img id="coverart" src="noalbum.png" /></a>
+
+      <div id="place"></div>
+
+      <!-- end -->
+      <li id="end">End of list</li>
+    </ul>
+  </body>
+</html>
